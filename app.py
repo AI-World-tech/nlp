@@ -66,21 +66,11 @@ def predict():
   plt.ylabel('% of people')
   plt.title('sentiment')
   plt.savefig('static/image/new_plot.png')
-  #plt.savefig('plot.png')
-  #output = io.BytesIO()
   
-   #mimetype='image/png')
     
 		
   return render_template('result.html', name = 'new_plot', url ='static/image/new_plot.png')
-#eturn render_template('untitled1.html', name = plt.show())
 
-"""@app.route('/get_image',methods=['POST'])
-def get_image():
-    if request.args.get('type') == '1':
-       filename = 'ok.gif'
-    else:
-       filename = 'error.gif'
-    return send_file(filename, mimetype='image/gif')"""
+
 if __name__ == '__main__':
 	app.run(debug=True)
