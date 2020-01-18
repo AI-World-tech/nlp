@@ -20,9 +20,7 @@ sid_obj = SentimentIntensityAnalyzer()
 pos=0
 neg=0
 app = Flask(__name__)
-port = int(os.environ.get('PORT', 5000)) 
-app.run(host='0.0.0.0', port=port)
-
+heroku config:add PORT=33507
 @app.route('/')
 def home():
 	return render_template('home.html')
@@ -73,4 +71,4 @@ def predict():
 
 
 if __name__ == '__main__':
-	app.run(debug=True,port=5000)
+	app.run(debug=True,port=33507)
