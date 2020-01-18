@@ -14,11 +14,14 @@ import matplotlib.pyplot as plt
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import io
 import random
+from pml import app 
 from flask import Response
 sid_obj = SentimentIntensityAnalyzer()
 pos=0
 neg=0
 app = Flask(__name__)
+port = int(os.environ.get('PORT', 5000)) 
+sapp.run(host='0.0.0.0', port=port)
 
 @app.route('/')
 def home():
